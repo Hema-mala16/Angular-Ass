@@ -10,7 +10,7 @@ import { IEntry } from './entries';
 export class HomeService {
 
   entries:IEntry[]
-  private entryUrl:string = 'https://localhost:44376/api/weightapi'
+  private entryUrl:string = 'https://localhost:44341/api/weightapi'
   constructor(private _httpClient:HttpClient) { }
 
   // getEntry():IEntry[]{
