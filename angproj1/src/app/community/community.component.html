@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>Healthy My Community</h1>
+<h3>Comments:</h3>
+<div *ngFor="let comment of comments">
+    {{comment.commenter}}&nbsp;said:&nbsp;{{comment.comment}}
+</div>
+<app-comment-form></app-comment-form>
+</div>

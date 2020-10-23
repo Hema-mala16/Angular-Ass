@@ -1,0 +1,27 @@
+[     
+    {
+           "id": 1,
+           "commenter": "Bob",
+           "comment": "Great job!!" 
+    },     
+    {       
+            "id": 2,
+            "commenter": "Alex",
+            "comment": "Your progress is inspiring!"
+    },
+    {       
+        "id": 3,       
+        "commenter": "Sherry",       
+        "comment": "Way to go so far!"     
+    },
+    {       
+        "id": 4,       
+        "commenter": "Nicole",       
+        "comment": "Keep it up!"     
+    },
+    {       
+        "id": 5,       
+        "commenter": "John",       
+        "comment": "How is the diet going?"     
+    }   
+] 

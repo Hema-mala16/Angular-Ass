@@ -1,0 +1,25 @@
+<div class='card' *ngIf='product'>
+
+    <div class='card-header'>
+ 
+      {{pageTitle + ':  ' + product.weight}}
+ 
+    </div>
+    <div class="card-body">
+        
+        <p>Date:&nbsp;{{product.date}}</p>
+        <p>Body Fat:&nbsp;{{product.bodyfat}}</p>
+        
+ </div>
+ 
+    <div class='card-footer'>
+ 
+      <button class='btn btn-outline-secondary' (click)='onBack()' style='width:80px'>
+ 
+        <i class='fa fa-chevron-left'></i> Back
+ 
+      </button>
+ 
+    </div>
+ 
+  </div>

@@ -1,0 +1,17 @@
+<form (ngSubmit)="saveCustForm()" [formGroup]="commRForm" novalidate>
+<div class="container">
+    <div class="col-md-4" style="padding-top: 20px;">
+        <div style="padding-top: 10px;">
+        <input type="text" placeholder="New Comment" formControlName="comment" class="form-control">
+        <span *ngIf="(commRForm.get('comment').touched || commRForm.get('comment').dirty) && commRForm.get('comment').invalid" class="text-danger">
+            <span *ngIf="commRForm.get('comment').errors?.required">
+                IT Is Mandatory!!
+            </span>
+            <span *ngIf="commRForm.get('comment').errors?.maxlength">
+                Max length 10!!
+            </span>
+        </span>
+        </div>
+    </div>
+</div>
+</form>

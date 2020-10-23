@@ -1,0 +1,39 @@
+<div class="background card">
+        <div class="row">
+            <div class="col-md-6" style="padding-top: 50px;">
+                <h1>{{pageTitle}}</h1>
+            </div>
+        </div>
+        <button class="btn btn-primary col-md-2" (click)="toggleFat()">
+            {{showFat?'Hide':'Show'}} Body Fat
+        </button>
+        <div class="table-responsive">
+            <div *ngIf="entries && entries.length==0"><p>Sorry No data available</p></div>
+            <table class="table" *ngIf="entries && entries.length">
+                <thead>
+                    <tr>
+                        <!-- <th colspan="3" style="text-align: center;"> -->
+                            <th style="padding-left: 80px;">
+                                Date
+                        </th>
+                        <th>Weight</th>
+                        <th *ngIf="showFat">Body Fat</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let entry of entries">
+                        <td><a href="#" style="padding-right: 20px;"><i class="fa fa-trash text-dark"></i></a>
+                            <a href="#" style="padding-right: 20px;"><span class="fa fa-info-circle text-dark"></span></a>
+                            <!-- <button class="fa fa-info-circle"></button> -->
+                            <a [routerLink]="['/home',entry.id]">{{entry.date|date}}</a></td>
+                        <td>{{entry.weight}} lbs</td>
+                        <td *ngIf="showFat">{{entry.bodyfat|percent}}</td>
+                        
+                    </tr>
+                </tbody>
+                    
+            </table>
+        </div>
+    </div>
+<app-app-new-weight-entry [showbodyfat]="showFat" (emitter)="createNew($event)"></app-app-new-weight-entry>
